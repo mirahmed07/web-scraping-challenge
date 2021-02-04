@@ -37,7 +37,7 @@ MongoDB with Flask templating was used to create a new HTML page that displays a
 
 * A root route `/` was created, that simply displays a cover page with a button to begin the initial scraping (index.html).
 
-* A route called `/scrape` was created, that imports the `scrape_mars.py` script and calls the `.scrape()` function. This returns a Python dictionary that is stored in Mongo. Splinter's browser has been given a `headless` value of **False** so that scraping does not run in the background (takes ~40 seconds).
+* A route called `/scrape` was created, that imports the `scrape_mars.py` script and calls the `.scrape()` function. This returns a Python dictionary that is stored in Mongo. Splinter's browser has been given a `headless` value of **True** so that scraping runs in the background (takes ~40 seconds).
 
 * After scraping is complete, the `/scrape` route redirects to the `/data` route for display.
 
