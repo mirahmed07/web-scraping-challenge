@@ -36,9 +36,6 @@ def scrape():
     # save the news title under the <div> tag with a class of 'content_title'
     news_title = first_li.find('div', class_='content_title').text
     
-    # save the news date under the <div> tag with a class of 'content_title'
-    news_date = first_li.find('div', class_='list_date').text
-
     # save the news date under the <div> tag with a class of 'list_date'
     news_date = first_li.find('div', class_='list_date').text
 
@@ -158,7 +155,7 @@ def scrape():
         # retrieve the full-res image url and save into a variable
         hem_url = imagesoup.find('img', class_="wide-image")['src']
     
-        # complete the featured image url by adding the base url ---
+        # complete the featured image url by adding the base url
         img_url = base_url + hem_url
 
         # retrieve the image title using the title class and save into variable
